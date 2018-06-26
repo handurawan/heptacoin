@@ -2390,15 +2390,11 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // BIP16 is always enforced
     unsigned int flags = SCRIPT_VERIFY_P2SH;
 
-    // Start enforcing the DERSIG (BIP66) rule
-    if (pindex->nHeight >= chainparams.GetConsensus().BIP66Height) {
-        flags |= SCRIPT_VERIFY_DERSIG;
-    }
+    // BIP66 (DERSIG) is always enforced
+    flags |= SCRIPT_VERIFY_DERSIG;
 
-    // Start enforcing CHECKLOCKTIMEVERIFY (BIP65) rule
-    if (pindex->nHeight >= chainparams.GetConsensus().BIP65Height) {
-        flags |= SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
-    }
+    // BIP65 (CHECKLOCKTIMEVERIFY) is always enforced
+    flags |= SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
 
     // Start enforcing BIP68 (sequence locks) and BIP112 (CHECKSEQUENCEVERIFY) using versionbits logic.
     int nLockTimeFlags = 0;
