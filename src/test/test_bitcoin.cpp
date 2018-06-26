@@ -115,7 +115,10 @@ TestChain100Setup::CreateAndProcessBlock(const std::vector<CMutableTransaction>&
     unsigned int extraNonce = 0;
     IncrementExtraNonce(&block, chainActive.Tip(), extraNonce);
 
-    while (!CheckProofOfWork(block.GetHash(), block.nBits, chainparams.GetConsensus())) ++block.nNonce;
+    while (!CheckProofOfWork(block.GetHash(), block.nBits, chainparams.GetConsensus()))
+    {
+        block.nNonce = ArithToUint256(UintToArith256(block.nNonce) + 1);
+    }
 
     CValidationState state;
     ProcessNewBlock(state, chainparams, NULL, &block, true, NULL, false);
