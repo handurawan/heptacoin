@@ -76,7 +76,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>HeptacoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подпиши съобщение...</translation>
@@ -262,7 +262,7 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Heptacoin Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

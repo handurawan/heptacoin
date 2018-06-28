@@ -52,7 +52,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>HeptacoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Heptacoin</source>
+        <translation>Heptacoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -714,8 +714,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin மையம்</translation>
+        <source>Heptacoin Core</source>
+        <translation>Heptacoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

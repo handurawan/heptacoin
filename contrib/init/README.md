@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: bitcoind.service
-Upstart: bitcoind.conf
-OpenRC:  bitcoind.openrc
-         bitcoind.openrcconf
-CentOS:  bitcoind.init
-OS X:    org.bitcoin.bitcoind.plist
+SystemD: heptacoind.service
+Upstart: heptacoind.conf
+OpenRC:  heptacoind.openrc
+         heptacoind.openrcconf
+CentOS:  heptacoind.init
+OS X:    org.heptacoin.heptacoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

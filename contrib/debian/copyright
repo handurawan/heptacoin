@@ -1,18 +1,20 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Bitcoin
+Upstream-Name: Heptacoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#bitcoin@freenode.net
-Source: https://github.com/bitcoin/bitcoin
+Source: https://github.com/heptacoin/heptacoin
 
 Files: *
 Copyright: 2009-2016, Bitcoin Core Developers
+Copyright: 2017-2018, Heptacoin Core Developers
 License: Expat
-Comment: The Bitcoin Core Developers encompasses the current developers listed on bitcoin.org,
+Comment: The Heptacoin Core Developers encompasses the current developers listed on heptacoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
 Copyright: 2010-2011, Jonas Smedegaard <dr@jones.dk>
            2011, Matt Corallo <matt@bluematt.me>
+           2017-2018, Heptacoin Core Developers
 License: GPL-2+
 
 Files: debian/manpages/*
@@ -81,6 +83,13 @@ Files: src/qt/res/icons/about.png
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
 Comment: Site: https://bitcointalk.org/?topic=1756.0
+
+Files: src/qt/res/icons/heptacoin.*
+       share/pixmaps/heptacoin*
+       src/qt/res/src/heptacoin.svg
+Copyright: 2017-2018, Heptacoin Core Developers
+License: Expat
+Comment:
 
 
 License: Expat

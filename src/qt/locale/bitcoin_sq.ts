@@ -56,7 +56,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>HeptacoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Duke u sinkronizuar me rrjetin...</translation>
@@ -94,8 +94,8 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Heptacoin</source>
+        <translation>Heptacoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -438,8 +438,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Berthama Bitcoin</translation>
+        <source>Heptacoin Core</source>
+        <translation>Berthama Heptacoin</translation>
     </message>
     <message>
         <source>Information</source>

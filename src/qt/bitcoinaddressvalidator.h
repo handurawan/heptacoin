@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
+// Copyright (c) 2017-2018 The Heptacoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +21,7 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-/** Bitcoin address widget validator, checks for a valid bitcoin address.
+/** Heptacoin address widget validator, checks for a valid heptacoin address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {

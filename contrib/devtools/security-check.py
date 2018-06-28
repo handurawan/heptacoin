@@ -1,5 +1,6 @@
 #!/usr/bin/python2
 # Copyright (c) 2015-2016 The Bitcoin Core developers
+# Copyright (c) 2017-2018 The Heptacoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''

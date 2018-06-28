@@ -1,30 +1,21 @@
-Bitcoin Core version 0.13.x is now available from:
+Heptacoin Core version 0.13.x is now available from:
 
-  <https://bitcoin.org/bin/bitcoin-core-0.13.x/>
+  <https://heptacoin.org/bin/heptacoin-core-0.13.x/>
 
 This is a new minor version release, including various bugfixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/bitcoin/bitcoin/issues>
-
-To receive security and update notifications, please subscribe to:
-
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://github.com/heptacoin/heptacoin/issues>
 
 Compatibility
 ==============
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
 an OS initially released in 2001. This means that not even critical security
-updates will be released anymore. Without security updates, using a bitcoin
+updates will be released anymore. Without security updates, using a heptacoin
 wallet on a XP machine is irresponsible at least.
-
-In addition to that, with 0.12.x there have been varied reports of Bitcoin Core
-randomly crashing on Windows XP. It is [not clear](https://github.com/bitcoin/bitcoin/issues/7681#issuecomment-217439891)
-what the source of these crashes is, but it is likely that upstream
-libraries such as Qt are no longer being tested on XP.
 
 We do not have time nor resources to provide support for an OS that is
 end-of-life. From 0.13.0 on, Windows XP is no longer supported. Users are
@@ -61,5 +52,3 @@ Credits
 Thanks to everyone who directly contributed to this release:
 
 [to be filled in at release]
-
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).

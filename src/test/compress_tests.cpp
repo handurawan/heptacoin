@@ -17,10 +17,10 @@
 #define NUM_MULTIPLES_CENT 10000
 
 // amounts 1 .. 10000
-#define NUM_MULTIPLES_1BTC 10000
+#define NUM_MULTIPLES_1HEPTA 10000
 
 // amounts 7 .. 7000000
-#define NUM_MULTIPLES_7BTC 1000000
+#define NUM_MULTIPLES_7HEPTA 1000000
 
 BOOST_FIXTURE_TEST_SUITE(compress_tests, BasicTestingSetup)
 
@@ -52,10 +52,10 @@ BOOST_AUTO_TEST_CASE(compress_amounts)
     for (uint64_t i = 1; i <= NUM_MULTIPLES_CENT; i++)
         BOOST_CHECK(TestEncode(i * CENT));
 
-    for (uint64_t i = 1; i <= NUM_MULTIPLES_1BTC; i++)
+    for (uint64_t i = 1; i <= NUM_MULTIPLES_1HEPTA; i++)
         BOOST_CHECK(TestEncode(i * COIN));
 
-    for (uint64_t i = 1; i <= NUM_MULTIPLES_7BTC; i++)
+    for (uint64_t i = 1; i <= NUM_MULTIPLES_7HEPTA; i++)
         BOOST_CHECK(TestEncode(i * 7 * COIN));
 
     for (uint64_t i = 0; i < 100000; i++)

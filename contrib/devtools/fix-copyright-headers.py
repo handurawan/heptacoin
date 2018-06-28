@@ -1,15 +1,20 @@
 #!/usr/bin/env python
 '''
+Copyright (c) 2012-2015 The Bitcoin Core developers
+Copyright (c) 2017-2018 The Heptacoin Core developers
+Distributed under the MIT software license, see the accompanying
+file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 Run this script to update all the copyright headers of files
 that were changed this year.
 
 For example:
 
-// Copyright (c) 2009-2012 The Bitcoin Core developers
+// Copyright (c) 2017-2018 The Heptacoin Core developers
 
 it will change it to
 
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2017-2019 The Heptacoin Core developers
 '''
 import os
 import time
@@ -17,8 +22,8 @@ import re
 
 year = time.gmtime()[0]
 CMD_GIT_DATE = 'git log --format=%%ad --date=short -1 %s | cut -d"-" -f 1'
-CMD_REGEX= "perl -pi -e 's/(20\d\d)(?:-20\d\d)? The Bitcoin/$1-%s The Bitcoin/' %s"
-REGEX_CURRENT= re.compile("%s The Bitcoin" % year)
+CMD_REGEX= "perl -pi -e 's/(20\d\d)(?:-20\d\d)? The Heptacoin/$1-%s The Heptacoin/' %s"
+REGEX_CURRENT= re.compile("%s The Heptacoin" % year)
 CMD_LIST_FILES= "find %s | grep %s"
 
 FOLDERS = ["./qa", "./src"]

@@ -1,9 +1,10 @@
 #!/bin/bash
 # Copyright (c) 2014-2015 The Bitcoin Core developers
+# Copyright (c) 2017-2018 The Heptacoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)bitcoin/bitcoin(.git)?$ ]]; then
+if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)heptacoin/heptacoin(.git)?$ ]]; then
     exit 0
 fi
 

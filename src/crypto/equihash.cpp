@@ -1,6 +1,6 @@
 // Copyright (c) 2016 Jack Grigg
 // Copyright (c) 2016 The Zcash developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The Heptacoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +19,12 @@
 
 #include "compat/endian.h"
 #include "crypto/equihash.h"
+
+#ifndef NO_UTIL_LOG
 #include "util.h"
+#else
+#define LogPrint(...)
+#endif
 
 #include <algorithm>
 #include <iostream>

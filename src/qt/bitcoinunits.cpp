@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2017-2018 The Heptacoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,9 +18,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(HEPTA);
+    unitlist.append(mHEPTA);
+    unitlist.append(uHEPTA);
     return unitlist;
 }
 
@@ -27,9 +28,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case HEPTA:
+    case mHEPTA:
+    case uHEPTA:
         return true;
     default:
         return false;
@@ -40,9 +41,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("μBTC");
+    case HEPTA: return QString("HEPTA");
+    case mHEPTA: return QString("mHEPTA");
+    case uHEPTA: return QString::fromUtf8("μHEPTA");
     default: return QString("???");
     }
 }
@@ -51,9 +52,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Bitcoins");
-    case mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Bitcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case HEPTA: return QString("Heptacoins");
+    case mHEPTA: return QString("Milli-Heptacoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uHEPTA: return QString("Micro-Heptacoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -62,9 +63,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case HEPTA:  return 100000000;
+    case mHEPTA: return 100000;
+    case uHEPTA: return 100;
     default:   return 100000000;
     }
 }
@@ -73,9 +74,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case HEPTA: return 8;
+    case mHEPTA: return 5;
+    case uHEPTA: return 2;
     default: return 0;
     }
 }

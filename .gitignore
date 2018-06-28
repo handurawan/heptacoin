@@ -1,12 +1,13 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/bitcoin-tx
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/heptacoin
+src/heptacoind
+src/heptacoin-cli
+src/heptacoin-tx
+src/test/test_heptacoin
+src/qt/test/test_heptacoin-qt
+src/bench/bench_heptacoin
 
 # autoreconf
 Makefile.in
@@ -55,7 +56,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.bitcoin
+.heptacoin
 *.a
 *.pb.cc
 *.pb.h
@@ -74,12 +75,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+heptacoin-qt
+Heptacoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+heptacoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -101,7 +102,7 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
-qa/pull-tester/run-bitcoind-for-test.sh
+qa/pull-tester/run-heptacoind-for-test.sh
 qa/pull-tester/tests_config.py
 qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
