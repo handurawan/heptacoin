@@ -5,7 +5,7 @@ Upstart: heptacoind.conf
 OpenRC:  heptacoind.openrc
          heptacoind.openrcconf
 CentOS:  heptacoind.init
-OS X:    org.heptacoin.heptacoind.plist
+macOS:   org.heptacoin.heptacoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

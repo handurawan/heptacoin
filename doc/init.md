@@ -15,7 +15,7 @@ can be found in the contrib/init folder.
 
 All three Linux startup configurations assume the existence of a "heptacoin" user
 and group.  They must be created before attempting to use these scripts.
-The OS X configuration assumes heptacoind will be set up for the current user.
+The macOS configuration assumes heptacoind will be set up for the current user.
 
 2. Configuration
 ---------------------------------
@@ -65,7 +65,7 @@ reasons to make the configuration file and data directory only readable by the
 heptacoin user and group.  Access to heptacoin-cli and other heptacoind rpc clients
 can then be controlled by group membership.
 
-3b) Mac OS X
+3b) macOS
 
 Binary:              `/usr/local/bin/heptacoind`  
 Configuration file:  `~/Library/Application Support/Heptacoin/heptacoin.conf`  
@@ -107,7 +107,7 @@ Using this script, you can adjust the path and flags to the heptacoind program b
 setting the HEPTACOIND and FLAGS environment variables in the file
 /etc/sysconfig/heptacoind. You can also use the DAEMONOPTS environment variable here.
 
-4e) Mac OS X
+4e) macOS
 
 Copy org.heptacoin.heptacoind.plist into ~/Library/LaunchAgents. Load the launch agent by
 running `launchctl load ~/Library/LaunchAgents/org.heptacoin.heptacoind.plist`.

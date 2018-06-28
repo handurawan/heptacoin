@@ -20,7 +20,7 @@ Unpack the files into a directory and run:
 
 Unpack the files into a directory, and then run heptacoin-qt.exe.
 
-### OS X
+### macOS
 
 Drag Heptacoin-Core to your applications folder, and then run Heptacoin-Core.
 
@@ -33,7 +33,7 @@ Building
 ---------------------
 The following are developer notes on how to build Heptacoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
-- [OS X Build Notes](build-osx.md)
+- [macOS Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 - [Windows Build Notes](build-windows.md)
 - [OpenBSD Build Notes](build-openbsd.md)
