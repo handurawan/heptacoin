@@ -7,6 +7,7 @@
 # Not technically POSIX-compliant due to use of "local", but almost every
 # shell anyone uses today supports it, so its probably fine
 
+export LC_ALL=C
 DIR=$(dirname "$0")
 [ "/${DIR#/}" != "$DIR" ] && DIR=$(dirname "$(pwd)/$0")
 
