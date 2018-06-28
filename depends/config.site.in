@@ -63,7 +63,6 @@ LDFLAGS="-L$depends_prefix/lib $LDFLAGS"
 CC="@CC@"
 CXX="@CXX@"
 OBJC="${CC}"
-OBJCXX="${CXX}"
 PYTHONPATH=$depends_prefix/native/lib/python/dist-packages:$PYTHONPATH
 
 if test -n "@AR@"; then
