@@ -27,9 +27,9 @@ Homepage: https://heptacoin.org/
 Vcs-Git: git://github.com/heptacoin/heptacoin.git
 Vcs-Browser: https://github.com/heptacoin/heptacoin
 
-Package: heptacoind
+Package: heptacoin
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}
 Description: peer-to-peer network based digital currency - daemon
  Heptacoin is an experimental new digital currency that enables instant
  payments to anyone, anywhere in the world. Heptacoin uses peer-to-peer
@@ -38,30 +38,5 @@ Description: peer-to-peer network based digital currency - daemon
  is the name of the open source software which enables the use of this currency.
  .
  This package provides the daemon, heptacoind, and the CLI tool
- heptacoin-cli to interact with the daemon.
-
-Package: heptacoin-qt
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: peer-to-peer network based digital currency - Qt GUI
- Heptacoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Heptacoin uses peer-to-peer
- technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Heptacoin Core
- is the name of the open source software which enables the use of this currency.
- .
- This package provides Heptacoin-Qt, a GUI for Heptacoin based on Qt.
-
-Package: heptacoin-tx
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: peer-to-peer digital currency - standalone transaction tool
- Heptacoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Heptacoin uses peer-to-peer
- technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Heptacoin Core
- is the name of the open source software which enables the use of this currency.
- .
- This package provides heptacoin-tx, a command-line transaction creation
- tool which can be used without a heptacoin daemon.  Some means of
- exchanging minimal transaction data with peers is still required.
+ heptacoin-cli to interact with the daemon and Heptacoin-Qt, a GUI for Heptacoin
+ based on Qt.
