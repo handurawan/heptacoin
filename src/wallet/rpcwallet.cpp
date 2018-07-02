@@ -1659,7 +1659,7 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CBlockIndex *pindex = NULL;
+    const CBlockIndex *pindex = NULL;
     int target_confirms = 1;
     isminefilter filter = ISMINE_SPENDABLE;
 
@@ -1670,7 +1670,16 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
         blockId.SetHex(params[0].get_str());
         BlockMap::iterator it = mapBlockIndex.find(blockId);
         if (it != mapBlockIndex.end())
+        {
             pindex = it->second;
+            if (chainActive[pindex->nHeight] != pindex)
+            {
+                // the block being asked for is a part of a deactivated chain;
+                // we don't want to depend on its perceived height in the block
+                // chain, we want to instead use the last common ancestor
+                pindex = chainActive.FindFork(pindex);
+            }
+        }
     }
 
     if (params.size() > 1)
@@ -1681,9 +1690,10 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter");
     }
 
-    if(params.size() > 2)
-        if(params[2].get_bool())
-            filter = filter | ISMINE_WATCH_ONLY;
+    if (params.size() > 2 && params[2].get_bool())
+    {
+        filter = filter | ISMINE_WATCH_ONLY;
+    }
 
     int depth = pindex ? (1 + chainActive.Height() - pindex->nHeight) : -1;
 
