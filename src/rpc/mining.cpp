@@ -451,6 +451,8 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
             "  \"curtime\" : ttt,                  (numeric) current timestamp in seconds since epoch (Jan 1 1970 GMT)\n"
             "  \"bits\" : \"xxxxxxxx\",              (string) compressed target of next block\n"
             "  \"height\" : n                      (numeric) The height of the next block\n"
+            "  \"equihashn\" : n                   (numeric) Equihash N\n"
+            "  \"equihashk\" : n                   (numeric) Equihash K\n"
             "}\n"
 
             "\nExamples:\n"
@@ -746,6 +748,8 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     result.push_back(Pair("curtime", pblock->GetBlockTime()));
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
+    result.push_back(Pair("equihashn", (int64_t)(Params().EquihashN())));
+    result.push_back(Pair("equihashk", (int64_t)(Params().EquihashK())));
 
     const struct BIP9DeploymentInfo& segwit_info = VersionBitsDeploymentInfo[Consensus::DEPLOYMENT_SEGWIT];
     if (!pblocktemplate->vchCoinbaseCommitment.empty() && setClientRules.find(segwit_info.name) != setClientRules.end()) {
