@@ -2381,6 +2381,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // time BIP34 activated, in each of the existing pairs the duplicate coinbase had overwritten the first
     // before the first had been spent.  Since those coinbases are sufficiently buried its no longer possible to create further
     // duplicate transactions descending from the known pairs either.
+    // If we're on the known chain at height greater than where BIP34 activated, we can save the db accesses needed for the BIP30 check.
+    CBlockIndex *pindexBIP34height = pindex->pprev->GetAncestor(chainparams.GetConsensus().BIP34Height);
 
     // BIP30 and BIP34 are always enforced
     BOOST_FOREACH(const CTransaction& tx, block.vtx) {
@@ -3575,7 +3577,8 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     // Enforce BIP 34 rule that the coinbase starts with serialized block height.
     // In Heptacoin this has been enforced since launch, except that the genesis
     // block didn't include the height in the coinbase.
-    if (nHeight > 0)
+    // Due a bug in the EWBF miner, we enforce this rule after block 16.
+    if (nHeight > consensusParams.BIP34Height)
     {
         CScript expect = CScript() << nHeight;
         if (block.vtx[0].vin[0].scriptSig.size() < expect.size() ||
