@@ -80,6 +80,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 500000;
         consensus.BIP34Height = 17;
+        consensus.BIP34Hash = uint256S("0x00027bddbd061aaa05912e76b2367876ae51f2976841ca4144e45da2272904eb");
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
         consensus.powLimit = uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -175,6 +176,7 @@ public:
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 500000;
         consensus.BIP34Height = 17;
+        consensus.BIP34Hash = uint256S("0x052db6e92045433125bb0be4e3b4b0621f9575aefec69ce687665fd728f698c2");
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
         consensus.powLimit = uint256S("07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -266,6 +268,7 @@ public:
         strNetworkID = "regtest";
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
+        consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
         consensus.powLimit = uint256S("0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f");
