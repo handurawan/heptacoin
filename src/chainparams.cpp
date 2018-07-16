@@ -79,9 +79,6 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 500000;
-        consensus.nMajorityEnforceBlockUpgrade = 750;
-        consensus.nMajorityRejectBlockOutdated = 950;
-        consensus.nMajorityWindow = 1000;
         consensus.powLimit = uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowAveragingWindow = 17;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);
@@ -174,9 +171,6 @@ public:
     CTestNetParams() {
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 500000;
-        consensus.nMajorityEnforceBlockUpgrade = 51;
-        consensus.nMajorityRejectBlockOutdated = 75;
-        consensus.nMajorityWindow = 100;
         consensus.powLimit = uint256S("07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowAveragingWindow = 17;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);
@@ -265,9 +259,6 @@ public:
     CRegTestParams() {
         strNetworkID = "regtest";
         consensus.nSubsidyHalvingInterval = 150;
-        consensus.nMajorityEnforceBlockUpgrade = 750;
-        consensus.nMajorityRejectBlockOutdated = 950;
-        consensus.nMajorityWindow = 1000;
         consensus.powLimit = uint256S("0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f");
         consensus.nPowAveragingWindow = 17;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);

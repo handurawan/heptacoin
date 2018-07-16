@@ -40,10 +40,6 @@ struct BIP9Deployment {
 struct Params {
     uint256 hashGenesisBlock;
     int nSubsidyHalvingInterval;
-    /** Used to check majorities for block version upgrade */
-    int nMajorityEnforceBlockUpgrade;
-    int nMajorityRejectBlockOutdated;
-    int nMajorityWindow;
     /**
      * Minimum blocks including miner confirmation of the total of 2016 blocks in a retargetting period,
      * (nPowTargetTimespan / nPowTargetSpacing) which is also used for BIP9 deployments.
